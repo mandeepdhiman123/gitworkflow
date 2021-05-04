@@ -27,7 +27,7 @@ jobs:
           SLACK_CHANNEL: github_alerts
           SLACK_MESSAGE: 'Test Notification'
           SLACK_TITLE: Test title
-          SLACK_USERNAME: webhookbot
+          SLACK_USERNAME: incoming-webhook
           SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
           SLACK_MSG_AUTHOR: $GITHUB_ACTOR
 ## A workflow run is made up of one or more jobs that can run sequentially or in parallel
