@@ -21,16 +21,16 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Slack Notification
-        run: 'curl -X POST --data-urlencode payload={"channel": "#github_alerts", "username": "webhookbot", "text": "This is posted to #github_alerts and comes from a bot named webhookbot.", "icon_emoji": ":ghost:"} ${{ secrets.SLACK_WEBHOOK }}'
-#        uses: rtCamp/action-slack-notify@v2
-#        env:
-#          SLACK_CHANNEL: general
+#        run: 'curl -X POST --data-urlencode payload={"channel": "#github_alerts", "username": "webhookbot", "text": "This is posted to #github_alerts and comes from a bot named webhookbot.", "icon_emoji": ":ghost:"} ${{ secrets.SLACK_WEBHOOK }}'
+        uses: rtCamp/action-slack-notify@v2
+        env:
+          SLACK_CHANNEL: github_alerts
 #          SLACK_COLOR: ${{ job.status }} # or a specific color like 'green' or '#ff00ff'
 ##          SLACK_ICON: https://github.com/rtCamp.png?size=48
-#          SLACK_MESSAGE: 'Test Notification :rocket:'
-#          SLACK_TITLE: Test title
-#          SLACK_USERNAME: mandeep.kumar@technoforte.co.in
-#          SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
+          SLACK_MESSAGE: 'Test Notification :rocket:'
+          SLACK_TITLE: Test title
+          SLACK_USERNAME: mandeep.kumar@technoforte.co.in
+          SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
 ## A workflow run is made up of one or more jobs that can run sequentially or in parallel
 #jobs:
 #  # This workflow contains a single job called "build"
