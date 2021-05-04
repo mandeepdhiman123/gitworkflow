@@ -21,7 +21,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Slack Notification
-        run: 'curl -X POST --data-urlencode payload={"channel": "#github_alerts", "username": "webhookbot", "text": "This is posted to #github_alerts and comes from a bot named webhookbot.", "icon_emoji": ":ghost:"} ${{ secrets.SLACK_WEBHOOK }}'
+        run: 'curl -X POST --data-urlencode payload={channel: #github_alerts, username: webhookbot, text: This is posted to #github_alerts and comes from a bot named webhookbot.} ${{ secrets.SLACK_WEBHOOK }}'
 #        uses: rtCamp/action-slack-notify@v2
 #        env:
 #          SLACK_CHANNEL: general
